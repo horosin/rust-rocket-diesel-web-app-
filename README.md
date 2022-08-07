@@ -6,15 +6,20 @@ Based on [this article][tutorial].
 
 ## Development
 
+Start a dev db
 ```
-cargo watch -x run
+docker-compose up
 ```
 
 Run migrations
-
 ```
 diesel migration run \
   --database-url postgresql://postgres:example@localhost:5432/postgres
+```
+
+Start the app, the port will be printed.
+```
+cargo watch -x run
 ```
 
 ## Utils
